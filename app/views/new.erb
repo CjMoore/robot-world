@@ -1,19 +1,11 @@
-<nav class="cyan darken-3">
-  <div class="nav-wrapper cyan darken-3 container">
-    <a href="#" class="brand-logo right">Robot World</a>
-    <ul id="nav-mobile" class="left hide-on-med-and-down">
-      <li><a href='/'>Home</a></li>
-      <li><a href='/robots'>Robots</a></li>
-      <li><a href='/robots/new'>New Robot</a></li>
-    </ul>
-  </div>
-</nav>
+<%= erb :navpartial %>
+
 <section class = "container">
   <form action='/robots' method="POST">
     <h3>Enter a Robot</h3>
     <input type="text" name="robot[name]" placeholder="Name"/><br/>
     <h4>Location</h4>
-    <input type="text" name="robot[city]" placeholder="city"/></br/>
+    <input type="text" name="robot[city]" placeholder="City"/></br/>
     <input type="text" name="robot[state]" placeholder="State" /><br />
     <input type="text" name="robot[department]" placeholder="Department"/><br/>
     <input class="btn cyan darken-3" type="submit" />

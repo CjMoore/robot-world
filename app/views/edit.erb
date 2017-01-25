@@ -1,13 +1,4 @@
-<nav class="cyan darken-3">
-  <div class="nav-wrapper cyan darken-3 container">
-    <a href="#" class="brand-logo right">Robot World</a>
-    <ul id="nav-mobile" class="left hide-on-med-and-down">
-      <li><a href='/'>Home</a></li>
-      <li><a href='/robots'>Robots</a></li>
-      <li><a href='/robots/new'>New Robot</a></li>
-    </ul>
-  </div>
-</nav>
+<%= erb :navpartial %>
 
 <section class="container">
   <form action="/robots/<%=@robot.id%>" method="POST">

@@ -1,13 +1,4 @@
-<nav class="cyan darken-3">
-  <div class="nav-wrapper cyan darken-3 container">
-    <a href="#" class="brand-logo right">Robot World</a>
-    <ul id="nav-mobile" class="left hide-on-med-and-down">
-      <li><a href='/'>Home</a></li>
-      <li><a href='/robots'>Robots</a></li>
-      <li><a href='/robots/new'>New Robot</a></li>
-    </ul>
-  </div>
-</nav>
+<%= erb :navpartial %>
 
   <div class="col s12 m7">
      <h2 class="header center"><%= @robot.name%></h2>
@@ -16,10 +7,23 @@
          <img src="https://robohash.org/<%=@robot.name%>">
        </div>
        <div class="card-stacked">
-         <div class="card-content">
-           <p>City: <%= @robot.city%></p>
-           <p>State: <%= @robot.state%></p>
-           <p>Department: <%= @robot.department%></p>
+         <div class="card-content center">
+           <table>
+             <thead>
+               <tr>
+                 <th>City</th>
+                 <th>State</th>
+                 <th>Department</th>
+               </tr>
+             </thead>
+             <tbody>
+               <tr>
+                 <td><%= @robot.city%></td>
+                 <td><%= @robot.state%></td>
+                 <td><%= @robot.department%></td>
+               </tr>
+             </tbody>
+           </table>
          </div>
        </div>
      </div>
