@@ -1,0 +1,24 @@
+
+body {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  /*background: blue;*/
+
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  text-align: center;
+}
+
+h1 #my-robots {
+  text-align: center;
+  background: blue;
+}
+
+.container {
+  padding-left: 30px;
+  padding-right: 30px;
+}

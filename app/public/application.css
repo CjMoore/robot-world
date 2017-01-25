@@ -1,1 +1,10 @@
 
+body {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  background: blue;
+
+}
+
+a {
+  text-decoration: none;
+}

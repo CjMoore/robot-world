@@ -1,9 +1,23 @@
-<form action="/robots/<%=@robot.id%>" method="POST">
-  <h2>Edit</h2>
-  <input type="hidden" name="_method" value="PUT" />
-  <input type="text" name="robot[name]" value = "<%=@robot.name%>" placeholder="Name"/><br/>
-  <h4>Location</h4>
-  <input type="text" name="robot[city]" value="<%=@robot.city%>" placeholder="city"/></br/>
-  <input type="text" name="robot[state]" value="<%=@robot.state%>" placeholder="State" /><br />
-  <input type="text" name="robot[department]" value="<%=@robot.department%>" placeholder="Department"/><br/>
-  <input type="submit" />
+<nav>
+  <div class="nav-wrapper cyan darken-3">
+    <a href="#" class="brand-logo right">Robot World</a>
+    <ul id="nav-mobile" class="left hide-on-med-and-down">
+      <li><a href='/robots'>Robots</a></li>
+      <li><a href='/robots/new'>New Robot</a></li>
+      <li><a href='/'>Home</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="container">
+  <form action="/robots/<%=@robot.id%>" method="POST">
+    <h2>Edit</h2>
+    <input type="hidden" name="_method" value="PUT" />
+    <input type="text" name="robot[name]" value = "<%=@robot.name%>" placeholder="Name"/><br/>
+    <h4>Location</h4>
+    <input type="text" name="robot[city]" value="<%=@robot.city%>" placeholder="city"/></br/>
+    <input type="text" name="robot[state]" value="<%=@robot.state%>" placeholder="State" /><br />
+    <input type="text" name="robot[department]" value="<%=@robot.department%>" placeholder="Department"/><br/>
+    <input class = "btn cyan darken-3" type="submit" />
+  </form>
+</section>

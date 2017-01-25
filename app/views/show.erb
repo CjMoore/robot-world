@@ -1,5 +1,26 @@
-<a href='/robots'>Robot index</a>
-<h1><%= @robot.name%></h1>
-<p>City: <%= @robot.city%></p>
-<p>State: <%= @robot.state%></p>
-<p>Department: <%= @robot.department%></p>
+<nav>
+  <div class="nav-wrapper cyan darken-3">
+    <a href="#" class="brand-logo right">Robot World</a>
+    <ul id="nav-mobile" class="left hide-on-med-and-down">
+      <li><a href='/robots'>Robots</a></li>
+      <li><a href='/robots/new'>New Robot</a></li>
+      <li><a href='/'>Home</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <div class="col s12 m7">
+     <h2 class="header center"><%= @robot.name%></h2>
+     <div class="card horizontal">
+       <div class="card-image">
+         <img src="https://robohash.org/<%=@robot.name%>">
+       </div>
+       <div class="card-stacked">
+         <div class="card-content">
+           <p>City: <%= @robot.city%></p>
+           <p>State: <%= @robot.state%></p>
+           <p>Department: <%= @robot.department%></p>
+         </div>
+       </div>
+     </div>
+   </div>

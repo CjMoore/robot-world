@@ -1,13 +1,32 @@
-<h1>My Robots</h1>
+<nav>
+  <div class="nav-wrapper cyan darken-3">
+    <a href="#" class="brand-logo center">My Robots</a>
+    <ul id="nav-mobile" class="left hide-on-med-and-down">
+      <li><a href='/robots'>Robots</a></li>
+      <li><a href='/robots/new'>New Robot</a></li>
+      <li><a href='/'>Home</a></li>
+    </ul>
+  </div>
+</nav>
 
-<% @robots.each do |robot|%>
-  <h3><a href='/robots/<%=robot.id%>'><%=robot.name%></a></h3>
-  <p>City : <%= robot.city%></p>
-  <p>State: <%= robot.state%></p>
-  <p>Department: <%= robot.department%></p>
-  <a href='/robots/<%=robot.id%>/edit'>Edit</a>
-  <form action='/robots/<%=robot.id%>' method= "POST">
-    <input type="hidden" name="_method" value="DELETE" />
-    <input type="submit" value="Delete" />
-  </form>
-<%end%>
+<!-- <h1>My Robots</h1> -->
+
+<ul class = "collection container">
+
+  <% @robots.each do |robot|%>
+    <li class = "collection-item avatar center">
+      <h3 class = "title"><a href='/robots/<%=robot.id%>'><%=robot.name%></a></h3>
+      <img class= "circle" src="https://robohash.org/<%=robot.name%>">
+      <p>City : <%= robot.city%></p>
+      <p>State: <%= robot.state%></p>
+      <p>Department: <%= robot.department%></p>
+      <div class="btn-floating cyan darken-3">
+        <a href='/robots/<%=robot.id%>/edit'><span class="white-text">Edit</span></a>
+      </div>
+      <form action='/robots/<%=robot.id%>' method= "POST">
+        <input type="hidden" name="_method" value="DELETE" />
+        <input class= "btn btn-small cyan darken-3" type="submit" value="Delete" />
+      </form>
+    </li>
+  <%end%>
+</ul>
