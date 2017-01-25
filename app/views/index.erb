@@ -1,10 +1,10 @@
-<nav>
-  <div class="nav-wrapper cyan darken-3">
+<nav class="cyan darken-3">
+  <div class="nav-wrapper cyan darken-3 container">
     <a href="#" class="brand-logo center">My Robots</a>
     <ul id="nav-mobile" class="left hide-on-med-and-down">
+      <li><a href='/'>Home</a></li>
       <li><a href='/robots'>Robots</a></li>
       <li><a href='/robots/new'>New Robot</a></li>
-      <li><a href='/'>Home</a></li>
     </ul>
   </div>
 </nav>
@@ -14,18 +14,18 @@
 <ul class = "collection container">
 
   <% @robots.each do |robot|%>
-    <li class = "collection-item avatar center">
+    <li class = "collection-item avatar center clearfix">
       <h3 class = "title"><a href='/robots/<%=robot.id%>'><%=robot.name%></a></h3>
       <img class= "circle" src="https://robohash.org/<%=robot.name%>">
       <p>City : <%= robot.city%></p>
       <p>State: <%= robot.state%></p>
       <p>Department: <%= robot.department%></p>
-      <div class="btn-floating cyan darken-3">
+      <div class="btn-floating indigo lighten-1">
         <a href='/robots/<%=robot.id%>/edit'><span class="white-text">Edit</span></a>
       </div>
       <form action='/robots/<%=robot.id%>' method= "POST">
         <input type="hidden" name="_method" value="DELETE" />
-        <input class= "btn btn-small cyan darken-3" type="submit" value="Delete" />
+        <input class= "btn pink darken-2 right" type="submit" value="Delete" />
       </form>
     </li>
   <%end%>

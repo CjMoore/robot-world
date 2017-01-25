@@ -1,9 +1,18 @@
 require_relative '../models/robot.rb'
+require_relative '../models/collector'
 
 class RobotWorldApp < Sinatra::Base
+  include Collector
+
   set :root, File.expand_path("..", __dir__)
 
   get '/' do
+    @robots = Robot.all
+    @by_city = collect_by_city(@robots)
+    @by_state = collect_by_state(@robots)
+    @by_department = collect_by_department(@robots)
+    # binding.pry
+
     erb :dashboard
   end
 

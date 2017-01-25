@@ -5,6 +5,11 @@ body {
 
 }
 
+.input .btn .pink .darken-2 .right .clearfix{
+  overflow: auto;
+  background: blue
+}
+
 a {
   text-decoration: none;
 }

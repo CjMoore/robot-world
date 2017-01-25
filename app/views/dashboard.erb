@@ -1,11 +1,93 @@
 
-  <nav>
-    <div class="nav-wrapper cyan darken-3">
+  <nav class="cyan darken-3">
+    <div class="nav-wrapper cyan darken-3 container">
       <a href="#" class="brand-logo right">Robot World</a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href='/'>Home</a></li>
         <li><a href='/robots'>Robots</a></li>
         <li><a href='/robots/new'>New Robot</a></li>
-        <li><a href='/'>Home</a></li>
       </ul>
     </div>
   </nav>
+
+  <div class="row container">
+    <div class="col s12 m12 center">
+      <div class="card indigo lighten-1">
+        <div class="card-content white-text">
+          <span class="card-title center">Stats</span>
+          <table>
+            <thead>
+              <tr>
+                <th data-field="bots">Total Number of Robots</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><%=@robots.count%></td>
+              </tr>
+            </tbody>
+          </table>
+          <table>
+            <thead>
+              <tr>
+                <th data-field="city">
+                  City
+                </th>
+                <th data-field="bots_in_city">
+                  Bots in City
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+                <% @by_city.each do |key, value|%>
+                <tr>
+                  <td><%= key%></td>
+                  <td><%=value%></td>
+                </tr>
+                <%end%>
+              </tbody>
+          </table>
+          <table>
+            <thead>
+              <tr>
+                <th data-field="state">
+                  City
+                </th>
+                <th data-field="bots_in_state">
+                  Bots in State
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+                <% @by_state.each do |key, value|%>
+                <tr>
+                  <td><%= key%></td>
+                  <td><%=value%></td>
+                </tr>
+                <%end%>
+              </tbody>
+          </table>
+          <table>
+            <thead>
+              <tr>
+                <th data-field="department">
+                  City
+                </th>
+                <th data-field="bots_in_Department">
+                  Bots in Department
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+                <% @by_department.each do |key, value|%>
+                <tr>
+                  <td><%= key%></td>
+                  <td><%=value%></td>
+                </tr>
+                <%end%>
+              </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
