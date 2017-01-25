@@ -4,7 +4,7 @@
 <ul class = "collection container">
 
   <% @robots.each do |robot|%>
-    <li class = "collection-item avatar center clearfix">
+    <li class = "collection-item avatar center clearfix indigo lighten-5">
       <h5><a class = "black-text left" href='/robots/<%=robot.id%>'><%=robot.name%></a></h5>
       <img class= "circle" src="https://robohash.org/<%=robot.name%>">
       <table>
@@ -28,7 +28,7 @@
       </div>
       <form action='/robots/<%=robot.id%>' method= "POST">
         <input type="hidden" name="_method" value="DELETE" />
-        <input class= "btn pink darken-2 secondary-content" type="submit" value="Delete" />
+        <input class= "btn red lighten-2 secondary-content" type="submit" value="Delete" />
       </form>
     </li>
   <%end%>
